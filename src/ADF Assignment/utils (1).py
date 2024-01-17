@@ -50,4 +50,5 @@ def transform_data_for_gold_layer(customer_sales_df, gold_df):
         "store_name", "location", "manager_name", "product_name",
         "price", "stock_quantity", "image_url"
     )
+    
 
