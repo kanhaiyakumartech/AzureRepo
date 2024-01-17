@@ -66,4 +66,3 @@ final_gold_path = "gold/sales_view/store_product_sales_analysis"
 final_df.write.format("delta").mode("overwrite").save(final_gold_path)
 
 
-
