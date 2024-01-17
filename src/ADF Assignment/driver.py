@@ -28,6 +28,7 @@ upsert_to_silver_layer(customer_df, silver_layer_path, 'sales_view', 'customer',
 product_path = "dbfs:/mnt/mountpointstorageadf/product"
 product_df = spark.read.format("csv").option("header", "true").load(product_path)
 
+
 # 7) Convert column headers to snake case and create 'sub_category' column
 product_df = product_df.toDF(*[convert_to_snake_case(col) for col in product_df.columns])
 product_df = product_df.withColumn('sub_category', 
